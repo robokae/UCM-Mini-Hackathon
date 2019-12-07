@@ -22,15 +22,67 @@ document.addEventListener('DOMContentLoaded', function() {
   var modals = document.querySelectorAll('.modal');
   M.Modal.init(modals);
 
-
 });
 
 
+
+//signup or create new user functionality
+const signUpForm = document.querySelector('#signUpForm');
 //Code for the sign up fuctionality
 signUpForm.addEventListener('submit', (e) => {
   e.preventDefault();
 
-  const email = signUpForm['email-signup']
-  const password = signUpForm['password-signup']
+  const email = signUpForm['email-signup'].value
+  const password = signUpForm['password-signup'].value
+  const username = signUpForm['username-signup'].value
 
+  auth.createUserWithEmailAndPassword(email, password).then(cred => {
+    
+    const currentmodal = document.querySelector('#modal-signup');
+    M.Modal.getInstance(currentmodal).close();
+    signUpForm.reset();
+  });
+
+})
+
+
+//logout functionality
+const logout = document.querySelector('#logout');
+logout.addEventListener('click', (e)=>{
+  e.preventDefault();
+  auth.signOut().then(()=>{
+    console.log("user signed out")
+  })
+  
+})
+
+
+//login functionaility 
+const loginform = document.querySelector('#loginForm');
+loginform.addEventListener('submit', (e)=>{
+  e.preventDefault();
+
+  const email = loginform['email-signin'].value
+  const password = loginform['password-signin'].value
+
+  auth.signInWithEmailAndPassword(email, password).then(cred => {
+    console.log(cred.user);
+
+    //close login modal
+    const currentmodal = document.querySelector('#modal-login');
+    M.Modal.getInstance(currentmodal).close();
+    loginform.reset();
+
+  })
+  
+})
+
+
+//auth status change listener
+auth.onAuthStateChanged(user => {
+  if(user == null){
+    window.location.href = "../Signin Page/signin.html";
+  }
+  
+  console.log(user);
 })

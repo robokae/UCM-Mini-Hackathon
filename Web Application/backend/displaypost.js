@@ -12,7 +12,7 @@ var firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 
 const db = firebase.firestore();
-db.settings({ timestampsInSnapshots: true });
+const auth = firebase.auth();
 
 
 
@@ -30,3 +30,12 @@ snapshot.docs.forEach(doc => {
 
 }) 
 })
+
+//auth status change listener
+auth.onAuthStateChanged(user => {
+    if(user == null){
+      window.location.href = "../Signin Page/signin.html";
+    }
+    
+    console.log(user);
+  })
