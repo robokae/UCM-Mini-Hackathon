@@ -1,5 +1,5 @@
 var firebaseConfig = {
-    apiKey: "AIzaSyBKuyH0EPs3Jd3GfEFGgUfu6WfV75T7Izc",
+    apiKey: "",
     authDomain: "hack-m2019.firebaseapp.com",
     databaseURL: "https://hack-m2019.firebaseio.com",
     projectId: "hack-m2019",
@@ -10,4 +10,3 @@ var firebaseConfig = {
   };
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
-  firebase.analytics();
