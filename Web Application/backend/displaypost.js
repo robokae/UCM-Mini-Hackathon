@@ -1,5 +1,5 @@
 var firebaseConfig = {
-    apiKey: "",
+    apiKey: "AIzaSyCzM5btiHZBnFWXpcWRfe0fD7J_6uLdoQI",
     authDomain: "hack-m2019.firebaseapp.com",
     databaseURL: "https://hack-m2019.firebaseio.com",
     projectId: "hack-m2019",
@@ -17,18 +17,32 @@ const auth = firebase.auth();
 
 
 function loadPost(doc){
-    doc.data().name;
-    doc.data().time;
-    doc.data().post;
+    name = doc.data().usrname;
+    date = doc.data().time;
+    post = doc.data().message;
+
+    
 
 }
 
-db.collection('OrderSummary').get().then((snapshot) => {
+//loads info from database
+db.collection('Posts').get().then((snapshot) => {
 snapshot.docs.forEach(doc => {
     loadPost(doc);
     
 
 }) 
+})
+
+
+//logout functionality
+const logout = document.querySelector('#logout');
+logout.addEventListener('click', (e)=>{
+  e.preventDefault();
+  auth.signOut().then(()=>{
+    console.log("user signed out")
+  })
+  
 })
 
 //auth status change listener
