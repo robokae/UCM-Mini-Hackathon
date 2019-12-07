@@ -14,23 +14,65 @@
   <!-- Initialize Firebase -->
   <script src="/__/firebase/init.js"></script>
   <link rel="stylesheet" href="style.css">
+  
   <!-- Google fonts -->
   <link href="https://fonts.googleapis.com/css?family=Poppins|Roboto&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome icons -->
+  <script src="https://kit.fontawesome.com/857afb1854.js" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
   <div class="container">
+      <div class="navbar">
+        <span class="homepage">Home</span>
+        <span class="profile-button"><i class="fas fa-user-circle"></i></span>
+      </div>
+
       <div class="search-bar">
           <input type="text" class="search" placeholder="Search">
       </div>
       <div class="create-post">
-          <button class="post-button">Start a new post...</button>
+          <button class="post-button">Start a new post</button>
       </div>
     
       <div class="post">
         <div class="post-details">
-          
+            <span class="profile-picture">
+              <i class="fas fa-user-circle"></i>
+            </span>
+            <span class="name">John S.</span>
+            <span class="date">December 7, 2019</span>
+          </div>
+    
+        <div class="post-content">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta facilis explicabo tempore esse perferendis necessitatibus provident odio, tempora qui officiis.
         </div>
+      </div>
+
+      <div class="post">
+        <div class="post-details">
+          <span class="profile-picture">
+            <i class="fas fa-user-circle"></i>
+          </span>
+          <span class="name">Sara J.</span>
+          <span class="date">December 7, 2019</span>
+        </div>
+    
+        <div class="post-content">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta facilis explicabo tempore esse perferendis necessitatibus provident odio, tempora qui officiis.
+        </div>
+      </div>
+
+      <div class="post">
+        <div class="post-details">
+            <span class="profile-picture">
+                <i class="fas fa-user-circle"></i>
+            </span>
+            <span class="name">Mike S.</span>
+            <span class="date">December 7, 2019</span>
+          </div>
     
         <div class="post-content">
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta facilis explicabo tempore esse perferendis necessitatibus provident odio, tempora qui officiis.
@@ -40,3 +82,4 @@
 </body>
 
 </html>
+
