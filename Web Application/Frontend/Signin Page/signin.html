@@ -8,12 +8,13 @@
     <script src="https://www.gstatic.com/firebasejs/7.5.2/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.5.2/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.5.2/firebase-firestore.js"></script>
-
+   
+    <link rel="stylesheet" href="style.css">
 
 </head>
 <body>
 
-    <div>
+    <div id="signup-div" class = unhidden>
       <h4>Sign up</h4><br />
       <form id="signUpForm">
         <div class="input-field">
@@ -33,7 +34,7 @@
     </div>
   </div>
 
-    <div>
+    <div id="login-div" class = hidden>
       <h4>Login</h4><br />
       <form id="loginForm">
         <div class="input-field">
@@ -47,6 +48,8 @@
         <button type='submit'>Login</button>
       </form>
     </div>
+
+    <input type="button" onclick="unhide(this) " value="Create New User">
 
     <script src="../../backend/signin.js"></script>
 </body> 
