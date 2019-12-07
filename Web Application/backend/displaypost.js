@@ -7,6 +7,26 @@ var firebaseConfig = {
     messagingSenderId: "622912116834",
     appId: "1:622912116834:web:6a8ff889f9eb08ae8f593b",
     measurementId: "G-6SMZPDFM03"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+
+const db = firebase.firestore();
+db.settings({ timestampsInSnapshots: true });
+
+
+
+function loadPost(doc){
+    doc.data().name;
+    doc.data().time;
+    doc.data().post;
+
+}
+
+db.collection('OrderSummary').get().then((snapshot) => {
+snapshot.docs.forEach(doc => {
+    loadPost(doc);
+    
+
+}) 
+})
