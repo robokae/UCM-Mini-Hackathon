@@ -46,7 +46,6 @@ loginform.addEventListener('submit', (e)=>{
   const password = loginform['password-signin'].value
 
   auth.signInWithEmailAndPassword(email, password).then(cred => {
-    console.log(cred.user);
 
     //close login modal
     loginform.reset();
@@ -60,7 +59,22 @@ loginform.addEventListener('submit', (e)=>{
 auth.onAuthStateChanged(user => {
   if(user != null)
     window.location.href = "../Home Page/index.html";
-  
-
-  console.log(user);
 })
+
+
+const logindiv = document.getElementById('login-div')
+const signupdiv = document.getElementById('signup-div')
+//function to switch from sign up to sign in
+function unhide(clickedButton) {
+  
+  if (clickedButton.value == 'Create New User') {
+    logindiv.className = 'unhidden';
+    signupdiv.className = 'hidden';
+    clickedButton.value = 'Login'
+  }
+  else{
+    logindiv.className = 'hidden';
+    signupdiv.className = 'unhidden';
+    clickedButton.value = 'Create New User'
+  }
+}
