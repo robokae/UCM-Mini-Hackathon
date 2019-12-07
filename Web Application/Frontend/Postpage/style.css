@@ -28,6 +28,7 @@ body {
     width: auto;
     width: 90%;
     padding: 0 50px 0 5px;
+    height: 90%;
 
 
 }
@@ -36,10 +37,16 @@ body {
     width: 60%;
 }
 
+#desc {
+    display: inline-block;
+    vertical-align: middle;
+    width: auto;
+    width: 90%;
+}
+
 textarea {
+
     width: 100%;
-    display: table-cell;
-    padding: 0 50px 0 5px;
     -webkit-box-sizing: border-box;
     /* Safari/Chrome, other WebKit */
     -moz-box-sizing: border-box;
@@ -48,4 +55,11 @@ textarea {
     /* Opera/IE 8+ */
     font-size: 21px;
     font-family: Poppins, Roboto, Arial, Helvetica, sans-serif;
+
+}
+
+#submit {
+    display: table-cell;
+    vertical-align: bottom;
+    width: 100%;
 }
