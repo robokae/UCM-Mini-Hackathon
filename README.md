@@ -1,2 +1,2 @@
 # UCM-Mini-Hackathon
-Project for mini hackathon
+Project for Hack'M
