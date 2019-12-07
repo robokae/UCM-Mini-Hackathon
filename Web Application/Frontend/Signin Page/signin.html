@@ -3,8 +3,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="materialize.css">
-    <title>Main Page</title>
 
 
     <script src="https://www.gstatic.com/firebasejs/7.5.2/firebase-app.js"></script>
@@ -13,33 +11,9 @@
 
 
 </head>
-<body class="grey lighten-3">
+<body>
 
-  <!-- NAVBAR -->
-  <nav class="z-depth-1 blue">
-    <div class="nav-wrapper container">
-      
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
-          <li class="logged-in">
-            <a href="#" class="black-text modal-trigger" data-target="modal-profile">Profile</a>
-          </li>
-          <li class="logged-in">
-            <a href="#" class="black-text" id="logout">Logout</a>
-          </li>
-          <li class="logged-out">
-            <a href="#" class="black-text modal-trigger" data-target="modal-login">Login</a>
-          </li>
-          <li class="logged-out">
-            <a href="#" class="black-text modal-trigger" data-target="modal-signup">Sign up</a>
-          </li>
-        </span>
-      </ul>
-    </div>
-  </nav>
-
- <!--Modal for the sign up -->
-   <div id="modal-signup" class="modal">
-    <div class="modal-content">
+    <div>
       <h4>Sign up</h4><br />
       <form id="signUpForm">
         <div class="input-field">
@@ -54,14 +28,12 @@
           <input type="password" id="password-signup" required />
           <label for="password-signup">Choose Password</label>
         </div>
-        <button class="btn yellow darken-2 z-depth-0">Sign up</button>
+        <button >Sign up</button>
       </form>
     </div>
   </div>
 
-   <!--Modal for the login-->
-  <div id="modal-login" class="modal">
-    <div class="modal-content">
+    <div>
       <h4>Login</h4><br />
       <form id="loginForm">
         <div class="input-field">
@@ -72,20 +44,10 @@
           <input type="password" id="password-signin" required />
           <label for="login-password">Your password</label>
         </div>
-        <button class="btn yellow darken-2 z-depth-0">Login</button>
+        <button type='submit'>Login</button>
       </form>
     </div>
-  </div>
 
-   <!--Modal for the profile -->
-  <div id="modal-profile" class="modal">
-    <div class="modal-content center-align">
-      <h4>Profile details</h4><br />
-      <div class="profile-details"></div>
-    </div>
-  </div>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  <script src="../../backend/signin.js"></script>
+    <script src="../../backend/signin.js"></script>
 </body> 
 </html>

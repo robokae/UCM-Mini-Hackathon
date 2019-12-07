@@ -16,16 +16,6 @@ const db = firebase.firestore();
 const auth = firebase.auth();
 
 
-// setup materialize components
-document.addEventListener('DOMContentLoaded', function() {
-
-  var modals = document.querySelectorAll('.modal');
-  M.Modal.init(modals);
-
-});
-
-
-
 //signup or create new user functionality
 const signUpForm = document.querySelector('#signUpForm');
 //Code for the sign up fuctionality
@@ -34,32 +24,22 @@ signUpForm.addEventListener('submit', (e) => {
 
   const email = signUpForm['email-signup'].value
   const password = signUpForm['password-signup'].value
-  const username = signUpForm['username-signup'].value
 
   auth.createUserWithEmailAndPassword(email, password).then(cred => {
     
-    const currentmodal = document.querySelector('#modal-signup');
-    M.Modal.getInstance(currentmodal).close();
     signUpForm.reset();
   });
 
 })
 
 
-//logout functionality
-const logout = document.querySelector('#logout');
-logout.addEventListener('click', (e)=>{
-  e.preventDefault();
-  auth.signOut().then(()=>{
-    console.log("user signed out")
-  })
-  
-})
+
 
 
 //login functionaility 
 const loginform = document.querySelector('#loginForm');
 loginform.addEventListener('submit', (e)=>{
+  console.log("hello")
   e.preventDefault();
 
   const email = loginform['email-signin'].value
@@ -69,8 +49,6 @@ loginform.addEventListener('submit', (e)=>{
     console.log(cred.user);
 
     //close login modal
-    const currentmodal = document.querySelector('#modal-login');
-    M.Modal.getInstance(currentmodal).close();
     loginform.reset();
 
   })
@@ -80,9 +58,9 @@ loginform.addEventListener('submit', (e)=>{
 
 //auth status change listener
 auth.onAuthStateChanged(user => {
-  if(user == null){
-    window.location.href = "../Signin Page/signin.html";
-  }
+  if(user != null)
+    window.location.href = "../Home Page/index.html";
   
+
   console.log(user);
 })
