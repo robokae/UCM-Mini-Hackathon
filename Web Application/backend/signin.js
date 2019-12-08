@@ -68,13 +68,13 @@ const signupdiv = document.getElementById('signup-div')
 function unhide(clickedButton) {
   
   if (clickedButton.value == 'Create New User') {
-    logindiv.className = 'unhidden';
-    signupdiv.className = 'hidden';
+    logindiv.className = 'hidden';
+    signupdiv.className = 'unhidden';
     clickedButton.value = 'Login'
   }
   else{
-    logindiv.className = 'hidden';
-    signupdiv.className = 'unhidden';
+    logindiv.className = 'unhidden';
+    signupdiv.className = 'hidden';
     clickedButton.value = 'Create New User'
   }
 }

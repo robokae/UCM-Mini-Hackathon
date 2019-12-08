@@ -60,15 +60,15 @@ snapshot.docs.forEach(doc => {
 })
 
 
-// //logout functionality
-// const logout = document.querySelector('#logout');
-// logout.addEventListener('click', (e)=>{
-//   e.preventDefault();
-//   auth.signOut().then(()=>{
-//     console.log("user signed out")
-//   })
+//logout functionality
+const logout = document.getElementById('logout-button');
+logout.addEventListener('click', (e)=>{
+  e.preventDefault();
+  auth.signOut().then(()=>{
+    console.log("user signed out")
+  })
   
-// })
+})
 
 //auth status change listener
 auth.onAuthStateChanged(user => {
