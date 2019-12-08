@@ -55,7 +55,7 @@ function loadPost(doc){
 }
 
 //loads info from database
-db.collection('Posts').get().then((snapshot) => {
+db.collection('Posts').orderBy("time", "desc").get().then((snapshot) => {
 snapshot.docs.forEach(doc => {
     loadPost(doc);
     
