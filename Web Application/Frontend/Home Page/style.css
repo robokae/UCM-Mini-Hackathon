@@ -2,7 +2,6 @@ body {
     margin: 0px;
     padding: 0px;
     font-family: Poppins, Roboto, Arial, Helvetica, sans-serif;
-    background-color: #333;
 }
 
 .container {
@@ -16,7 +15,7 @@ body {
     display: grid;
     grid-template-rows: 6% 8% 8% repeat(3, 50%);
     grid-row-gap: 20px;
-    overflow-y: auto; 
+    overflow-y: scroll; 
     justify-items: center;
     padding: 20px 30px;
     box-sizing: border-box;
@@ -34,7 +33,17 @@ body {
 
 .profile-button {
     float: right;
-    font-size: 30px;
+    font-size: 35px;
+    background-color: transparent;
+    border: none;
+}
+
+.profile-button:hover {
+    cursor: pointer;
+}
+
+.profile-button:focus {
+    outline: none;
 }
 .search-bar {
     width: 100%;
@@ -82,19 +91,29 @@ body {
     outline: none;
 }
 
+/* #posting-section {
+    border: 2px solid grey;
+    height: auto;
+    display: grid;
+    grid-template-rows: auto;
+    grid-gap: 20px;
+}
+
 .post { 
     border: 1px solid #ccc;
     border-radius: 10px;
     display: grid;
     grid-template-rows: 15% 85%;
+} */
+#posting-section {
+    border: 1px solid grey;
 }
 
+.post {
+    border: 1px solid grey;
+}
 .profile-picture{
     float: left;
-    height: 100%;
-    font-size: 30px;
-    padding-left: 20px;
-    padding-right: 20px;
 }
 
 .name {
