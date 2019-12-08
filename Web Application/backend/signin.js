@@ -29,6 +29,9 @@ signUpForm.addEventListener('submit', (e) => {
     
     signUpForm.reset();
   });
+  db.collection('Users').doc().set({
+    UID: user.UID
+  });
 
 })
 
