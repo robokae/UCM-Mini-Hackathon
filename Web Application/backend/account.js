@@ -64,6 +64,11 @@ const firebaseConfig = {
       
 //   }
 
+function backToHome(){
+    window.location.href = "../Home Page/index.html";
+    
+  }
+
   auth.onAuthStateChanged(user => {
     if(user != null){
         usrUID = user.email
