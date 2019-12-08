@@ -1,7 +1,21 @@
+body { 
+    font-family: Poppins, Roboto, Arial, Helvetica, sans-serif;
+}
+
+
 .hidden{
     display:none;
+    border: 1px solid grey;
 }
 
 .unhidden{
     display:block;
+    border: 1px solid grey;
 }
+
+
+label {
+    float: left;
+}
+
+
