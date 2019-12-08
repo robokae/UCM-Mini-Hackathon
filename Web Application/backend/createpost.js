@@ -31,12 +31,13 @@ function uploadPost(){
     message: post.value,
     time: dateadded
 
-});
-window.location.href = "../Home Page/index.html";
+  });
+  window.location.href = "../Home Page/index.html";
+
 
 }
 
-
+ 
 
 // //logout functionality
 // const logout = document.querySelector('#logout');
