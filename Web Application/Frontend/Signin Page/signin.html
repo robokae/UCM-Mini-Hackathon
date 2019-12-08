@@ -40,18 +40,17 @@
       <h1>Login</h1><br />
       <form id="loginForm">
         <div class="input-field">
-          <input type="email" id="email-signin" required />
           <label for="login-email">Email address</label>
+          <input type="email" id="email-signin" required />
         </div>
         <div class="input-field">
-          <input type="password" id="password-signin" required />
           <label for="login-password">Your password</label>
+          <input type="password" id="password-signin" required />
         </div>
         <button type='submit'>Login</button>
+        <span>or <input type="button" onclick="unhide(this) " value="Create New User"></span>
       </form>
     </div>
-
-    <input type="button" onclick="unhide(this) " value="Create New User">
 
     <script src="../../backend/signin.js"></script>
 </body> 
