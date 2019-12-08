@@ -54,6 +54,7 @@ loginform.addEventListener('submit', (e)=>{
     return result.user.updateProfile({
       displayName: document.getElementById("username-signup").value
     })
+  })
   
 })
 
