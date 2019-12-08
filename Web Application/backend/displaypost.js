@@ -65,14 +65,13 @@ snapshot.docs.forEach(doc => {
 
 
 //logout functionality
-const logout = document.getElementById('logout-button');
-logout.addEventListener('click', (e)=>{
-  e.preventDefault();
+function logoutbtn(){
+    
   auth.signOut().then(()=>{
     console.log("user signed out")
   })
   
-})
+}
 
 function postbutton(){
   window.location.href = "../PostPage/postpage.html";

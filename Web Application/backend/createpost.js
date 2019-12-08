@@ -20,40 +20,23 @@ const auth = firebase.auth();
 
 
 function uploadPost(){
+  
   var user = firebase.auth().currentUser.email;
   dateadded = firebase.firestore.FieldValue.serverTimestamp()
   let post = document.getElementById('postmessage')
 
-  console.log(dateadded);
+
    
   db.collection('Posts').doc().set({
     usrname: user,
     message: post.value,
     time: dateadded
 
+  }).then(function (){
+    window.location.href = "../Home Page/index.html";
   });
-  window.location.href = "../Home Page/index.html";
 
 
 }
 
  
-
-// //logout functionality
-// const logout = document.querySelector('#logout');
-// logout.addEventListener('click', (e)=>{
-//   e.preventDefault();
-//   auth.signOut().then(()=>{
-//     console.log("user signed out")
-//   })
-
-// })
-
-// auth status change listener
-// auth.onAuthStateChanged(user => {
-//   if(user == null){
-//     window.location.href = "../Signin Page/signin.html";
-//   }
-  
-//   console.log(user);
-// })
