@@ -21,29 +21,48 @@ const firebaseConfig = {
   const db = firebase.firestore();
   const auth = firebase.auth();
 
-  function editOrder(){
+//   function editOrder(button){
     
-    if(onClicked){
-      onClicked = false;
-      button = document.getElementById("editorder")
-      button.innerHTML = "Close Edit"
+//     if(onClicked){
+//       onClicked = false;
+//       button = document.getElementById("edit bio")
+//       button.value = "Close Edit"
 
-    }
-    else{
-      onClicked = true;
-      button = document.getElementById("editorder")
-      button.innerHTML = "Edit Order"
 
-      db.collection('Users').doc().where("UID", "==", user.UID).set({
-        usrname: username,
-        location: userlocation,
-        bio: userbio
-      },{merge: true})
+//       document.getElementById("locspan").className = 'hidden';
+//       document.getElementById("biospan").className = 'hidden';
+//       document.getElementById("usrspan").className = 'hidden';
+
+//       document.getElementById("bio").className = 'unhidden';
+//       document.getElementById("location").className = 'unhidden';
+//       document.getElementById("usrname").className = 'unhidden';
+
+//     }
+//     else{
+//       onClicked = true;
+//       button = document.getElementById("submit edit")
+//       button.value = "Edit Order"
+
+//       db.collection('Users').doc().where("UID", "==", user.UID).set({
+//         usrname: username,
+//         location: userlocation,
+//         bio: userbio
+//       },{merge: true})
+
+
+
+//       document.getElementById("locspan").className = 'unhidden';
+//       document.getElementById("biospan").className = 'unhidden';
+//       document.getElementById("usrspan").className = 'unhidden';
+
+//       document.getElementById("bio").className = 'hidden';
+//       document.getElementById("location").className = 'hidden';
+//       document.getElementById("usrname").className = 'hidden';
           
      
-    }
+//     }
       
-  }
+//   }
 
   auth.onAuthStateChanged(user => {
     if(user != null){
