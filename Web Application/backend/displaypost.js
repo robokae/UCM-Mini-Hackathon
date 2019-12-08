@@ -24,7 +24,7 @@ function loadPost(doc){
     date.className = "date";
     dateObj = doc.data().time.toDate();
 
-    name = doc.data().usrname;
+    name = "  " + doc.data().usrname;
     date = (dateObj.getMonth()+1).toString() + "/" + dateObj.getDate().toString()  + "/" +  dateObj.getFullYear().toString();
     post = doc.data().message;
 
