@@ -19,24 +19,27 @@ const auth = firebase.auth();
 
 function loadPost(doc){
     let name = document.createElement('span');
+    name.className = "name";
     let date = document.createElement('span');
-    let post = document.createElement('span');
+    date.className = "date";
+    dateObj = doc.data().time;
 
     name = doc.data().usrname;
-    date = doc.data().time;
+    date = dateObj;
     post = doc.data().message;
 
-    let div = document.createElement('div');
-    let maindiv = document.getElementById('posting-section');
+    let tr = document.createElement('tr');
+    let table = document.getElementById('posting-section');
 
-    div.innerHTML += (
+    tr.innerHTML += (
     '<div class="post">' +
         '<div class="post-details">' +
             '<span class="profile-picture">' +
                 '<i class="fas fa-user-circle"></i>' +
             '</span>' +
-            name + 
-            date +
+            '<span class="name">' + name + '</span>'+
+              '<span class="date">' + date + '</span>'+
+
           '</div>' +
     
         '<div class="post-content">' +
@@ -44,7 +47,8 @@ function loadPost(doc){
         '</div>'+
     '</div>'
     )
-    maindiv.append(div);
+    tr.className = "post";
+    table.append(tr);
 
 
 
