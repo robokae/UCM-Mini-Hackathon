@@ -50,6 +50,10 @@ loginform.addEventListener('submit', (e)=>{
     //close login modal
     loginform.reset();
 
+  }).then(function(result) {
+    return result.user.updateProfile({
+      displayName: document.getElementById("username-signup").value
+    })
   })
   
 })
