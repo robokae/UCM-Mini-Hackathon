@@ -1,0 +1,57 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+
+    <script src="https://www.gstatic.com/firebasejs/7.5.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.5.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.5.2/firebase-firestore.js"></script>
+   
+    <link rel="stylesheet" href="style.css">
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins|Roboto&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+    <div id="signup-div" class = hidden>
+      <h1>Sign up</h1>
+      <form id="signUpForm">
+        <div class="input-field">
+            <label for="username-signup">Choose Display Name</label>
+            <input type="text" id="username-signup" required />
+        </div>
+        <div class="input-field">
+          <label for="email-signup">Email Address</label>
+          <input type="email" id="email-signup" required />
+        </div>
+        <div class="input-field">
+          <label for="password-signup">Choose Password</label>
+          <input type="password" id="password-signup" required />
+        </div>
+        <button >Sign up</button>  or <input type="button" onclick="unhide(this) " value="Login"></span>
+      </form>
+    </div>
+  </div>
+
+    <div id="login-div" class = unhidden>
+      <h1>Login</h1><br />
+      <form id="loginForm">
+        <div class="input-field">
+          <label for="login-email">Email address</label>
+          <input type="email" id="email-signin" required />
+        </div>
+        <div class="input-field">
+          <label for="login-password">Your password</label>
+          <input type="password" id="password-signin" required />
+        </div>
+        <button type='submit'>Login</button>
+        <span> or <input type="button" onclick="unhide(this) " value="Create New User"></span>
+      </form>
+    </div>
+
+    <script src="../../backend/signin.js"></script>
+</body> 
+</html>

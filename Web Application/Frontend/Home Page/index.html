@@ -4,39 +4,49 @@
 
 <head>
   <title>Home Page</title>
-  <!-- The core Firebase JS SDK is always required and must be listed first -->
-  <script src="/__/firebase/7.5.2/firebase-app.js"></script>
+  
 
-  <!-- TODO: Add SDKs for Firebase products that you want to use
-      https://firebase.google.com/docs/web/setup#available-libraries -->
-  <script src="/__/firebase/7.5.2/firebase-analytics.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.5.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.5.2/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.5.2/firebase-firestore.js"></script>
 
-  <!-- Initialize Firebase -->
-  <script src="/__/firebase/init.js"></script>
+
   <link rel="stylesheet" href="style.css">
+  
   <!-- Google fonts -->
   <link href="https://fonts.googleapis.com/css?family=Poppins|Roboto&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome icons -->
+  <script src="https://kit.fontawesome.com/857afb1854.js" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
   <div class="container">
-      <div class="search-bar">
-          <input type="text" class="search" placeholder="Search">
+      <div class="buttons">
+          <button class="logout-button">Logout</button>
+          <button class="profile-button"><i class="fas fa-user-circle"></i></button>
+        </div>
+
+      <div class="navbar">
+        <span class="homepage">Home</span>
       </div>
+
       <div class="create-post">
-          <button class="post-button">Start a new post...</button>
+          <button class="post-button"><a href="../Postpage/postpage.html"> Start a new post</a></button>
       </div>
-    
-      <div class="post">
-        <div class="post-details">
-          
-        </div>
-    
-        <div class="post-content">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta facilis explicabo tempore esse perferendis necessitatibus provident odio, tempora qui officiis.
-        </div>
+      
+
+      <table id="posting-section">
+        
+      </table>
+
       </div>
+
   </div>
+
+  <script src="../../backend/displaypost.js"></script>
 </body>
 
 </html>
+
