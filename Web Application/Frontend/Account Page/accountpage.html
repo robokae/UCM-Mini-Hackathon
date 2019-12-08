@@ -1,6 +1,13 @@
 <!doctype html>
 
 <head>
+
+    <script src="https://www.gstatic.com/firebasejs/7.5.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.5.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.5.2/firebase-firestore.js"></script>
+   
+
+
 <title> Account Page </title>
 <!-- <img src= "https://i1.wp.com/lccbrevard.org/wp-content/uploads/2018/12/Empty-Profile-Photo.png?ssl=1" alt "empty profile picture" class="center"> -->
 <!-- Google fonts -->
@@ -16,6 +23,19 @@
       height: auto;
       font-family: Poppins, Roboto, Arial, Helvetica, sans-serif;
       /* background-image: linear-gradient(rgb(0, 150, 250), rgb(0, 100, 205)); Standard syntax (must be last) */
+    }
+      .hidden{
+      margin-left: auto;
+      margin-right: auto;
+      display:none;
+      border: 1px solid grey;
+      padding: 20px;
+    }
+
+      .unhidden{
+          display:block;
+          border: 0px;
+          padding: 20px;
     }
 
     .container {
@@ -184,7 +204,7 @@
     </style>
 </head>
 
-<body>
+<body onload="loadVars()">
     <div class="container">
 
       <div class="profile-icon">
@@ -194,16 +214,19 @@
       <div class="user-info-container">
         <div class="username">
           <label class="name">Username:</label>
-          <input type="text" class="username-input">
+          <input type="text" class="username-input hidden" id="usrname" >
+          <span id="usrspan" class="unhidden"></span>
         </div>
         <div class="location"></div>
           <label class="user-location">Location:</label>
-          <input type="text" class="location-input">
+          <input type="text" class="location-input hidden" id="location">
+          <span id="locspan" class="unhidden"></span>
         <div class="user-bio"></div>
           <label class="bio">Bio:</label>
-          <textarea class="user-bio-input"></textarea>
+          <textarea class="user-bio-input hidden" id="bio"></textarea>
+          <span id="biospan" class="unhidden"></span>
         <div class="edit-bio-button">
-            <button>Edit Bio</button>
+            <button id="edit" onclick="editOrder()">Edit Bio</button>
         </div>
       </div>
 
@@ -219,6 +242,7 @@
     
     
     </div>
+    <script src="../../backend/account.js"></script>
 </body>
 
 </html>

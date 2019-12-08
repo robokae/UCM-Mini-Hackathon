@@ -1,5 +1,7 @@
 function loadVars(){
     onClicked = true;
+   
+    
 }
 
 const firebaseConfig = {
@@ -26,16 +28,6 @@ const firebaseConfig = {
       button = document.getElementById("editorder")
       button.innerHTML = "Close Edit"
 
-    db.collection('Posts').orderBy("time", "desc").get().then((snapshot) => {
-        snapshot.docs.forEach(doc => {
-            doc.data().location;
-            doc.data().bio;
-            firebase.auth().currentUser.email;
-            
-        
-        }) 
-    })
-
     }
     else{
       onClicked = true;
@@ -43,9 +35,31 @@ const firebaseConfig = {
       button.innerHTML = "Edit Order"
 
       db.collection('Users').doc().where("UID", "==", user.UID).set({
+        usrname: username,
         location: userlocation,
         bio: userbio
-      },{merge: true});
+      },{merge: true})
+          
+     
     }
       
   }
+
+  auth.onAuthStateChanged(user => {
+    if(user != null){
+        usrUID = user.email
+        console.log(usrUID)
+        db.collection('Users').where("UID", "==", usrUID).get().then((snapshot) => {
+            snapshot.docs.forEach(doc => {
+                console.log(doc.data().location)
+                document.getElementById("locspan").outerHTML = "  " + doc.data().location;
+                document.getElementById("biospan").outerHTML = "  " + doc.data().bio;
+                document.getElementById("usrspan").outerHTML = "  " + usrUID;
+                
+            
+            }) 
+        })
+    }
+  })
+
+  
