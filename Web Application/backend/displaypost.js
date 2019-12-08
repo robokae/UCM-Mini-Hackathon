@@ -74,6 +74,17 @@ logout.addEventListener('click', (e)=>{
   
 })
 
+function postbutton(){
+  window.location.href = "../PostPage/postpage.html";
+  
+}
+function accountbutton(){
+    window.location.href = "../Account Page/accountpage.html";
+    
+  }
+
+
+
 //auth status change listener
 auth.onAuthStateChanged(user => {
     if(user == null){
