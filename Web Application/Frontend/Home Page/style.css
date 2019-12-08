@@ -33,15 +33,48 @@ body {
 
 .buttons {
     width: 100%;
-    border: 1px solid grey;
 }
 
 .profile-button { 
     float: right;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 5px 10px;
+    margin-right: 10px;
+    font-size: 21px;
 }
 
-#logout-button {
+.profile-button:hover {
+    color: #333;
+    background-color: #ccc;
+    cursor: pointer;
+}
+
+.profile-button:focus {
+    outline: none;
+}
+
+.logout-button {
     float: right;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 5px 10px;
+    font-family: Poppins, Roboto, Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+.logout-button:hover {
+    color: #333;
+    background-color: #ccc;
+    cursor: pointer;
+}
+
+.logout-button:focus {
+    outline: none;
 }
 
 .create-post {
@@ -75,8 +108,10 @@ body {
     border-radius: 10px;
     margin-bottom: 20px;
 }
-.profile-picture{
-    float: left;
+
+.post-button a {
+    text-decoration: none;
+    color: #fafafa;
 }
 
 .name {
