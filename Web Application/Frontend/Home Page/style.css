@@ -23,19 +23,25 @@ body {
 
 .navbar {
     width: 100%;
-    border: 1px solid grey;
+    text-align: center;
 }
 
 .homepage {
-    justify-content: center;
     font-size: 30px;
     font-weight: bold;
 }
 
 .buttons {
-    float: right;
+    width: 100%;
     border: 1px solid grey;
-    vertical-align: middle;
+}
+
+.profile-button { 
+    float: right;
+}
+
+#logout-button {
+    float: right;
 }
 
 .create-post {
