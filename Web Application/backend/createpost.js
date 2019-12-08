@@ -18,19 +18,23 @@ const db = firebase.firestore();
 const auth = firebase.auth();
 
 
+
 function uploadPost(){
-  let name = document.getElementById
-  let date = now();
-  let post = document.getElementById
+  var user = firebase.auth().currentUser.email;
+  dateadded = firebase.firestore.FieldValue.serverTimestamp()
+  let post = document.getElementById('postmessage')
 
+  console.log(dateadded);
+   
+  db.collection('Posts').doc().set({
+    usrname: user,
+    message: post.value,
+    time: dateadded
 
-    db.collection('Posts').doc().set({
-      usrname: name.value,
-      time: date,
-      message: post.value
-    });
+});
 
 }
+
 
 
 // //logout functionality
