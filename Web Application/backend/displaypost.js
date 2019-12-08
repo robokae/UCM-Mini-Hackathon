@@ -22,10 +22,10 @@ function loadPost(doc){
     name.className = "name";
     let date = document.createElement('span');
     date.className = "date";
-    dateObj = doc.data().time;
+    dateObj = doc.data().time.toDate();
 
     name = doc.data().usrname;
-    date = dateObj;
+    date = (dateObj.getMonth()+1).toString() + "/" + dateObj.getDate().toString()  + "/" +  dateObj.getFullYear().toString();
     post = doc.data().message;
 
     let tr = document.createElement('tr');
