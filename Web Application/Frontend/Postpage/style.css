@@ -26,18 +26,6 @@ body {
     background-color: #333;
 }
 
-#event {
-    display: inline-block;
-    vertical-align: middle;
-    text-align: center;
-    width: 90%;
-    margin: auto;
-}
-
-#event input {
-    width: 100%;
-}
-
 #desc {
     padding-top: 5%;
     display: inline-block;
