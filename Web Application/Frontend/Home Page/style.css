@@ -23,6 +23,7 @@ body {
 
 .navbar {
     width: 100%;
+    border: 1px solid grey;
 }
 
 .homepage {
@@ -31,7 +32,13 @@ body {
     font-weight: bold;
 }
 
-.profile-button {
+.buttons {
+    float: right;
+    border: 1px solid grey;
+    vertical-align: middle;
+}
+
+/* .profile-button {
     float: right;
     font-size: 35px;
     background-color: transparent;
@@ -44,7 +51,7 @@ body {
 
 .profile-button:focus {
     outline: none;
-}
+} */
 .search-bar {
     width: 100%;
 }
