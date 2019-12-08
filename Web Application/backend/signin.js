@@ -52,7 +52,7 @@ loginform.addEventListener('submit', (e)=>{
 
   }).then(function(result) {
     return result.user.updateProfile({
-      displayName: document.getElementById("usrname").value
+      displayName: document.getElementById("username-signup").value
     })
   
 })
