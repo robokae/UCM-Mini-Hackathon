@@ -74,11 +74,9 @@ function unhide(clickedButton) {
   if (clickedButton.value == 'Create New User') {
     logindiv.className = 'hidden';
     signupdiv.className = 'unhidden';
-    clickedButton.value = 'Login'
   }
   else{
     logindiv.className = 'unhidden';
     signupdiv.className = 'hidden';
-    clickedButton.value = 'Create New User'
   }
 }
