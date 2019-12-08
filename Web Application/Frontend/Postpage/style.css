@@ -11,8 +11,12 @@
     grid-row-gap: 20px;
     overflow-y: auto;
     justify-items: center;
-    padding: 20px 30px;
+    padding: 20px 20px;
     box-sizing: border-box;
+}
+
+span {
+    display: block;
 }
 
 body {
@@ -23,25 +27,23 @@ body {
 }
 
 #event {
-    display: table-cell;
+    display: inline-block;
     vertical-align: middle;
-    width: auto;
+    text-align: center;
     width: 90%;
-    padding: 0 50px 0 5px;
-    height: 90%;
-
-
+    margin: auto;
 }
 
 #event input {
-    width: 60%;
+    width: 100%;
 }
 
 #desc {
+    padding-top: 5%;
     display: inline-block;
     vertical-align: middle;
-    width: auto;
     width: 90%;
+    margin: auto;
 }
 
 textarea {
@@ -52,11 +54,7 @@ textarea {
 
 }
 
-#submit {
-    vertical-align: baseline;
-    padding-top: 500px;
-    padding-left: 10%;
-    padding-right: auto;
-    width: 100%;
-
+.butt {
+    margin-top: 500px;
+    padding-top: 5%;
 }
