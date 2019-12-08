@@ -32,6 +32,7 @@ function uploadPost(){
     time: dateadded
 
 });
+window.location.href = "../Home Page/index.html";
 
 }
 
